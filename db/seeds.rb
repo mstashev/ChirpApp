@@ -11,7 +11,7 @@ he# This file should contain all the record creation needed to seed the database
   name: Faker::LordOfTheRings.character,
   username_email: Faker::Internet.unique.email,
   password: "password",
-  avatar_url: ""
+  avatar_url: Faker::Avatar.image("50x50")
   )
   4.times do
     Message.create(
