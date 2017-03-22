@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
     elsif params[:user_id].exists?
       @chirp = User.find(params[:user_id]).posts
     else
-      @chirp = Message.order("created_at DESC")
+      @chirp = Message.timeline
     end
     render json: @chirp
   end

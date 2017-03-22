@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(api_token: params['api_token'])
     # binding.pry
-
     messages = @user.messages.each do |message|
       {:message => message}
     end
