@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     # elsif params[:user_id].exists?
     #   @chirp = User.find(params[:user_id]).posts
     else
-      @chirp = Message.timeline
+      @chirp = Message.timeline(nil)
     end
     render json: @chirp
   end
