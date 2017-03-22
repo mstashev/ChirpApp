@@ -33,15 +33,13 @@ gem 'socialization'
 gem 'active_model_serializers'
 gem 'faker'
 gem "twilio-ruby"
+gem 'shoulda'
 gem 'rails_12factor', group: :production
-gem 'factory_girl_rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem "socialization"
-  gem 'shoulda'
-  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -49,9 +47,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'shoulda'
-  gem 'factory_girl_rails'
-  gem "socialization"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -52,11 +52,6 @@ GEM
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
-    factory_girl (4.8.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.8.0)
-      factory_girl (~> 4.8.0)
-      railties (>= 3.0.0)
     faker (1.7.3)
       i18n (~> 0.5)
     ffi (1.9.18)
@@ -172,7 +167,6 @@ DEPENDENCIES
   active_model_serializers
   bcrypt (~> 3.1.7)
   byebug
-  factory_girl_rails
   faker
   listen (~> 3.0.5)
   pg (~> 0.18)
