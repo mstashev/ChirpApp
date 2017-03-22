@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+def rand_time(from, to=Time.now)
+  Time.at(rand(from.to_f..to.to_f))
+end
+
 10.times do
   user = User.create!(
   name: Faker::LordOfTheRings.character,
@@ -16,7 +20,8 @@
   4.times do
     Message.create(
     body: Faker::ChuckNorris.fact,
-    user: user
+    user: user,
+    created_at: rand_time(2.years.ago).to_formatted_s(:long_ordinal)
     )
   end
 end
