@@ -1,12 +1,11 @@
 class MessagesController < ApplicationController
-  # before_action :require_user, only: [:index]
 
   def index
     # binding.pry
     if current_user
       @chirp = Message.timeline(current_user)
-    elsif params[:user_id].exists?
-      @chirp = User.find(params[:user_id]).posts
+    # elsif params[:user_id].exists?
+    #   @chirp = User.find(params[:user_id]).posts
     else
       @chirp = Message.timeline
     end

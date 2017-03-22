@@ -13,5 +13,4 @@ class Message < ApplicationRecord
       Message.order("created_at DESC")
     end
   end
-
 end
